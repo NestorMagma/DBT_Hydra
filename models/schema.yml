@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: customers
+    description: list of names of all companies
+    columns:
+      - name: empresa
+        description: unique
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_customers
+    description: same list of names of all companies
+    columns:
+      - name: empresa
+        tests:
+          - unique
+          - not_null
